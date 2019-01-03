@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SystemInfoManagement</title>
+        <link href="/layui/css/layui.css" rel="stylesheet" />
+        <style>
+            .form-style{
+                width:80%;
+                margin:0 auto;
+            }
+            .logo {
+                width: 100px;
+            }
+            .Image-Setup{
+                display:inline-block;
+                width:150px;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="layui-form form-style layui-form-pane" lay-filter="SystemInfoForm">
+            <div class="layui-form-item" style="text-align:center;">
+                <input type="hidden" name="id" lay-verify="required" value="1"/>
+                <div class="Image-Setup">
+                    <img src="~/images/logo.png" class="logo" id="logo" />
+                    <div>
+                        <button class="layui-btn layui-btn-sm" style="margin-top:10px;" id="modifyLogo" type="button">更换Logo</button>
+                    </div>
+                    <input type="hidden" name="logoUrl" lay-verify="required" />
+                </div>
+                <div class="Image-Setup">
+                    <img src="~/images/WeChatQR.jpg" class="logo" id="wechatQR" />
+                    <div>
+                        <button class="layui-btn layui-btn-sm" style="margin-top:10px;" id="modifyWeChatQR" type="button">更换微信二维码</button>
+                    </div>
+                    <input type="hidden" name="weChatQR" lay-verify="required" />
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">网站标题</label>
+                <div class="layui-input-block">
+                    <input type="text" name="siteTitle" placeholder="请输入网站标题" autocomplete="off" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">关键字</label>
+                <div class="layui-input-block">
+                    <input type="text" name="keyWords" placeholder="请输入网站关键字，以英文逗号间隔，如：格莱,软件开发,人工智能" autocomplete="off" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">版权</label>
+                <div class="layui-input-block">
+                    <input type="text" name="copyright" placeholder="请输入网站版权信息" autocomplete="off" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">备案号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="record" placeholder="请输入网站备案信息" autocomplete="off" class="layui-input" lay-verify="required">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">QQ号码</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="qq" placeholder="请输入QQ号码" autocomplete="off" class="layui-input" lay-verify="required|number">
+                </div>
+                <label class="layui-form-label">微信号</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="weChat" placeholder="请输入微信号" autocomplete="off" class="layui-input" lay-verify="required">
+                </div>
+                <label class="layui-form-label">联系电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="phone" placeholder="请输入联系电话" autocomplete="off" class="layui-input" lay-verify="required|phone">
+                </div>
+            </div>
+            <div class="layui-form-item" style="text-align:center;">
+                <button class="layui-btn" lay-submit lay-filter="SystemInfo">保存</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </form>
+        <script src="/layui/layui.js"></script>
+        <script>
+            layui.use(['form', 'layer', 'upload', 'jquery'], function () {
+                var form = layui.form;
+                var upload = layui.upload;
+                var $ = layui.$;
+                var layer = layui.layer;
+
+                //初始化数据
+                $.get('/managementsystem/@Url.Action("GetSystemInfo", "SystemInfo")', function (response, status) {
+                    form.val("SystemInfoForm", response.data);
+                    $("#logo").attr("src", response.data.logoUrl);
+                    $("#wechatQR").attr("src", response.data.weChatQR);
+                    $("[name='id']").val(1);
+                });
+
+
+                //上传Logo
+                var logoButton = upload.render({
+                    elem: '#modifyLogo' //绑定元素
+                    , url: '/ManagementSystem/@Url.Action("MiddleCuttingImage", "FileUpload")' //上传接口
+                    , done: function (res) {
+                        //上传完毕回调
+                        $("#logo").attr("src", res.data);
+                        $("[name='logoUrl']").val(res.data);
+                    }
+                    , error: function () {
+                        //请求异常回调
+                        console.log("异常");
+                    }
+                    , accept: 'images'
+                    , size: 3072
+                    , acceptMime: 'image/*'
+                });
+
+                //上传微信二维码
+                var weChatQRButton = upload.render({
+                    elem: '#modifyWeChatQR' //绑定元素
+                    , url: '/ManagementSystem/@Url.Action("MiddleCuttingImage", "FileUpload")' //上传接口
+                    , done: function (res) {
+                        //上传完毕回调
+                        $("#wechatQR").attr("src", res.data);
+                        $("[name='wechatQR']").val(res.data);
+                    }
+                    , error: function () {
+                        //请求异常回调
+                        console.log("异常");
+                    }
+                    , accept: 'images'
+                    , size: 3072
+                    , acceptMime: 'image/*'
+                });
+
+
+                //监听提交
+                form.on('submit(SystemInfo)', function (data) {
+                    console.log(data);
+                    $.post('/managementsystem/@Url.Action("SaveSystemInfo", "SystemInfo")', data.field, function (response, status) {
+                        if (response.data > 0) {
+                            $("[name='id']").val(1);
+                            layer.msg('修改成功！');
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

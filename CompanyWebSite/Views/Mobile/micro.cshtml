@@ -1,0 +1,255 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model object
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>经典型网站 - 格莱软件</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+    <link href="/css/cooper.css" rel="stylesheet" />
+</head>
+
+<body>
+@Html.Partial("_Cooper")
+<!-- 公共头部导航 start -->
+    <section class="public-header">
+        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        </a>
+        <div class="hd-r">
+            <div class="hd-nav">
+                <ul class="nav-list">
+                    <li class="nav-item cur">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" href="javascript:;">网站建设</div>
+                        <ul class="subitems">
+                            <li class="subitem">
+                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hd-tel">
+                <div class="tel-title">售前咨询</div>
+                <div class="tel-num">
+                    <p class="tel-num-t">400-660-8066</p>
+                    <p class="tel-num-b">400-660-5555转1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 公共头部导航 end -->
+    <!-- 主体内容 start -->
+    <section class="mobile-wyx">
+        <!-- banner广告 start -->
+        <section class="p-banner">
+            <div class="banner-con">
+                <h3 class="banner-tit">让公众号活起来</h3>
+                <p class="banner-desc">展示、互动、营销 一个都不能少</p>
+                <div class="banner-btn">
+                    <a href="" target="_blank">在线咨询</a>
+                </div>
+            </div>
+        </section>
+        <!-- banner广告 end -->
+        <section class="items">
+            <ul class="block-1 public-center">
+                <li class="item">
+                    <h4 class="small-title">展示</h4>
+                    <ul class="list">
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h4 class="small-title">互动</h4>
+                    <ul class="list">
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item">
+                    <h4 class="small-title">营销</h4>
+                    <ul class="list">
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                        <li class="sub-item">
+                            <div class="sub-icon"></div>
+                            <p class="sub-p">微官网</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="items bgimg">
+            <div class="block-2 public-center">
+                <h4 class="items-title">微信公众号类型</h4>
+                <ul class="list">
+                    <li class="item">
+                        <div class="item-icon"></div>
+                        <div class="item-tit">订阅号</div>
+                        <p class="item-p">适用于新闻出版业</p>
+                        <p class="item-p">每天1次群发</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-icon"></div>
+                        <div class="item-tit">服务号</div>
+                        <p class="item-p">适用于任何企业</p>
+                        <p class="item-p">可以无限扩充功能</p>
+                    </li>
+                    <li class="item">
+                        <div class="item-icon"></div>
+                        <div class="item-tit">企业号</div>
+                        <p class="item-p">适用于大型企业，相当</p>
+                        <p class="item-p">于多个服务号集成</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="items">
+            <div class="block-3">
+                <h4 class="items-title">微信公众号类型</h4>
+                <img src="/images/mobile/wyx/weiyingxiao-show-3-1.png" alt="img">
+            </div>
+        </section>
+    </section>
+    <!-- 主体内容 end -->
+    <!-- 公共 - 更多服务 start -->
+    <!-- 公共 - 更多服务 end -->
+    @Html.Partial("_Help")
+    <!-- 公共底部 start -->
+    @Html.Partial("_Bottom")
+    <!-- 公共底部 end -->
+
+<script src="/assets/jquery1.11.2.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="/js/public.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    var dataDto = JSON.parse('@Html.Raw(dataStr)');
+    layui.use(['form','jquery','layer'], function () {
+        var form = layui.form;
+        var $ = layui.$;
+        var layer = layui.layer;
+
+        $("#cooper").on("click", function(data) {
+            $("#app").css("display", "block");
+            $("#app").css("animation", "cooperation-animation 1.2s");
+        });
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                titles: data
+            },
+            mounted: function() {
+                form.render();
+            }
+        });
+
+        form.on("submit(commit)", function (data) {
+            var details = $(":checked");
+            var detail = "";
+            for (var i = 0; i < details.length; i++) {
+                detail += details[i].value + " | ";
+            }
+            data.field.detail = detail;
+            console.log(data);
+            $.post('@Url.Action("AddCooper","Cooper")', data.field, function(data,status) {
+                if (data.data == 1) {
+                    layer.msg("提交成功！请等待我们联系您！");
+                    $('#app').css('display', 'none');
+                } else {
+                    layer.msg("提交失败！");
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.deps.json
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.runtimeconfig.json
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.dll
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.pdb
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.Views.dll
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.Views.pdb
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\bin\Release\netcoreapp2.1\VerifyCode.Gif.dll
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorAssemblyInfo.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.TagHelpers.input.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.TagHelpers.output.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorCoreGenerate.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\AddCase.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\UpdateCase.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Client\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\AddColor.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\UpdateColor.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\AddCooperContentPage.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\UpdateCooperContentPage.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperManager\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\AddCooperTitlePage.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\UpdateCooperTitlePage.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Industry\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Login\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Manager\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Product\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Case\casedetail.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Case\index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\app.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\micro.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\sell.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\web.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\NetWork\index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Offer\index.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Bottom.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Contact.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Cooper.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Error.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Head.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Help.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\classic.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\dirsir.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\dress.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\marketing.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\responsetype.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorTargetAssemblyInfo.cache
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorTargetAssemblyInfo.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.Views.pdb
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.dll
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.pdb
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CaseShow.g.cshtml.cs
+C:\Users\Administrator\Desktop\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\About\index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.deps.json
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.runtimeconfig.json
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.runtimeconfig.dev.json
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.dll
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.pdb
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.Views.dll
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\CompanyWebSite.Views.pdb
+F:\Project\visual studio\Company\CompanyWebSite\bin\Release\netcoreapp2.1\VerifyCode.Gif.dll
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.csprojAssemblyReference.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.csproj.CoreCompileInputs.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorAssemblyInfo.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorAssemblyInfo.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.AssemblyInfoInputs.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.AssemblyInfo.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.TagHelpers.input.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.TagHelpers.output.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorCoreGenerate.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\AddCase.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CaseManager\UpdateCase.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Client\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\AddColor.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Color\UpdateColor.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\AddCooperContentPage.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperContent\UpdateCooperContentPage.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperManager\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\AddCooperTitlePage.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\CooperTitle\UpdateCooperTitlePage.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Industry\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Login\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Manager\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\Product\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\About\index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Case\casedetail.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Case\index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\app.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\micro.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\sell.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Mobile\web.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\NetWork\index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Offer\index.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Bottom.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CaseShow.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Contact.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Cooper.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Error.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Head.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Help.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\classic.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\dirsir.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\dress.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\marketing.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\WebSiteBuild\responsetype.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorTargetAssemblyInfo.cache
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.RazorTargetAssemblyInfo.cs
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.Views.pdb
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.csproj.CopyComplete
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.dll
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\CompanyWebSite.pdb
+F:\Project\visual studio\Company\CompanyWebSite\obj\Release\netcoreapp2.1\Razor\Areas\ManagementSystem\Views\SystemInfo\Index.g.cshtml.cs

@@ -1,0 +1,193 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model object
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="xiaoyu" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客户案例 - 格莱软件</title>
+    <link rel="stylesheet" href="/assets/swiper/swiper-4.2.6.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/case.css">
+</head>
+
+<body>
+    <!-- 公共头部导航 start -->
+    <section class="public-header">
+        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        </a>
+        <div class="hd-r">
+            <div class="hd-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" href="javascript:;">网站建设</div>
+                        <ul class="subitems">
+                            <li class="subitem">
+                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                    </li>
+                    <li class="nav-item cur">
+                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hd-tel">
+                <div class="tel-title">售前咨询</div>
+                <div class="tel-num">
+                    <p class="tel-num-t">400-660-8066</p>
+                    <p class="tel-num-b">400-660-5555转1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 公共头部导航 end -->
+    <!-- 主体内容 start -->
+    <div id="app">
+        <section class="case-main case-list-main">
+            <!-- banner start -->
+            <section class="main-banner">
+                <div class="img-box">
+                    <img src="/images/case/case-banner.png" alt="">
+                </div>
+                <div class="banner-contetn">
+                    <div class="banner-wrap">
+                        <h2 class="banner-tit">精品案例</h2>
+                        <p class="banner-p">行业，风格，功能，产品……您只管选，我们负责呈现！</p>
+                    </div>
+                </div>
+            </section>
+            <!-- banner end -->
+
+
+            <section class="main-wrap public-center">
+                <div class="nav-bar">
+                    <a href="index.html">首页</a> &nbsp;>&nbsp;
+                    <a href="case.html">案例分享</a> &nbsp;>&nbsp;
+                    <a href="case.html">家居日用</a> &nbsp;>&nbsp;
+                    <span class="cur">{{name}}</span>
+                </div>
+                <div class="tit-box">
+                    <h3 class="tit-big">{{name}}</h3>
+                    <p class="tit-small">所属行业：{{industries}}</p>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" v-for="item in images">
+                            <img :src="item.path" alt="家居日用网站案例">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="company-name">{{name}}</div>
+                <div class="btn">
+                    <a href="">咨询此类产品服务</a>
+                </div>
+            </section>
+        </section>
+    </div>
+    <!-- 主体内容 end -->
+    <!-- 公共底部 start -->
+    @Html.Partial("_Bottom")
+    <!-- 公共底部 end -->
+
+    <script src="/assets/jquery1.11.2.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="/assets/swiper/swiper-4.2.6.min.js"></script>
+    <script src="/js/public.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script>
+        var dataDto = JSON.parse('@Html.Raw(dataStr)');
+        //修改系统信息
+        $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
+        $("#logo").css("width", "150px");   //修改尺寸
+        $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
+        $("#record").text(dataDto.systemInfo.record);   //修改备案
+        $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
+        $("#weChatQR").css("width", "130px");   //修改二维码尺寸
+        document.title = dataDto.systemInfo.siteTitle; //修改标题
+        document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
+
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                name: '深圳市好美佳智能家居股份有限公司',
+                industries: '家居日用',
+                images: [{ "caseID": 1, "id": 1, "path": '/images/case/banner-1.png'}]
+            },
+            mounted: function () {
+                var that = this;
+                var data = dataDto.caseDetail;
+                that.name = data.name;
+                var industry = "";
+                for (var i = 0; i < data.industries.length; i++) {
+                    if (i==0) {
+                        industry += data.industries[i];
+                        continue;
+                    }
+                    industry += "，"+data.industries[i];
+                }
+                that.industries = industry;
+                that.images = data.caseImages;
+            }
+        });
+
+        // 轮播图
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: true,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+    </script>
+
+</body>
+
+</html>

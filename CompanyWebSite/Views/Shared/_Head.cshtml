@@ -1,0 +1,62 @@
+﻿@model object
+@{
+    ViewData["Title"] = "Head";
+    Layout = null;
+}
+
+<!-- 公共头部导航 start -->
+<section class="public-header">
+    <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+        <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+    </a>
+    <div class="hd-r">
+        <div class="hd-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-link" href="javascript:;">网站建设</div>
+                    <ul class="subitems">
+                        <li class="subitem">
+                            <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hd-tel">
+            <div class="tel-title">售前咨询</div>
+            <div class="tel-num">
+                <p class="tel-num-t">400-660-8066</p>
+                <p class="tel-num-b">400-660-5555转1</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 公共头部导航 end -->

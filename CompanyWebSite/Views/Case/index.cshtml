@@ -1,0 +1,278 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model object
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="xiaoyu" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>客户案例 - 格莱软件</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/case.css">
+</head>
+
+<body>
+    <!-- 公共头部导航 start -->
+    <section class="public-header">
+        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        </a>
+        <div class="hd-r">
+            <div class="hd-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" href="javascript:;">网站建设</div>
+                        <ul class="subitems">
+                            <li class="subitem">
+                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                    </li>
+                    <li class="nav-item cur">
+                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hd-tel">
+                <div class="tel-title">售前咨询</div>
+                <div class="tel-num">
+                    <p class="tel-num-t">400-660-8066</p>
+                    <p class="tel-num-b">400-660-5555转1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 公共头部导航 end -->
+    <!-- 主体内容 start -->
+    <div id="app">
+        <section class="case-main">
+            <!-- banner start -->
+            <section class="main-banner">
+                <div class="img-box">
+                    <img src="/images/case/case-banner.png" alt="">
+                </div>
+                <div class="banner-contetn">
+                    <div class="banner-wrap">
+                        <h2 class="banner-tit">精品案例</h2>
+                        <p class="banner-p">行业，风格，功能，产品……您只管选，我们负责呈现！</p>
+                    </div>
+                </div>
+            </section>
+            <!-- banner end -->
+            <!--筛选项 start-->
+            <section>
+                <div class="top-nav public-center">
+                    <div class="nav-item">
+                        <div class="item-label">行业分类：</div>
+                        <ul class="list current type">
+                            <li class="item" v-on:click="industryid = null,getData()" v-bind:class="{ cur: industryid==null }">不限</li>
+                            <li class="item" v-for="item in industries" v-on:click="industryid = item.id,getData()" v-bind:class="{ cur: industryid==item.id }">{{item.name}}</li>
+                        </ul>
+                        <div class="slider-up">展开</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="nav-item">
+                        <div class="item-label">颜色：</div>
+                        <ul class="list bgcolor">
+                            <li class="item" v-bind:class="{ cur: colorid==null }" v-on:click="colorid = null,getData()"></li>
+                            <li class="item" v-for="item in colors" v-bind:title="item.name" v-on:click="colorid = item.id,getData()" v-bind:class="{ cur: item.id==colorid }"></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">
+                        <div class="item-label">产品分类：</div>
+                        <ul class="list">
+                            <li class="item" v-bind:class="{ cur: productid==null }" v-on:click="productid = null,getData()">不限</li>
+                            <li class="item" v-for="item in products" v-on:click="productid = item.id,getData()" v-bind:class="{ cur: item.id==productid }">{{item.name}}</li>
+                        </ul>
+                    </div>
+                    <div class="nav-item">
+                        <div class="item-label">客户端：</div>
+                        <ul class="list">
+                            <li class="item" v-bind:class="{ cur: clientid==null }" v-on:click="clientid = null,getData()">不限</li>
+                            <li class="item" v-for="item in clients" v-on:click="clientid = item.id,getData()" v-bind:class="{ cur: item.id==clientid }">{{item.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--筛选项 end-->
+            <!--案例列表 start-->
+            <section>
+                <ul class="public-list public-center">
+                    <li class="public-item" v-for="item in cases">
+                        <a :href="'@Url.Action("CaseDetail","Case")?id='+item.id" target="_blank">
+                            <div class="img-box">
+                                <img :src="item.cover" alt="深圳市超跃食品有限公司">
+                            </div>
+                            <div class="item-desc">
+                                <p class="item-tit">{{item.name}}</p>
+                                <p class="item-type">食品餐饮</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--案例列表 end-->
+            <!--分页 start-->
+            <section>
+                <div class="pagination public-center">
+                    <a class="first" href="" v-on:click="page=1">首页</a>
+                    <a class="prev" href="" v-if="paging>1 && page-1>0">上一页</a>
+                    <a class="num" href="" v-for="item in paging" v-bind:class="{ active: page==item }">{{item}}</a>
+                    <a class="next" href="" v-if="paging>1 && page+1<=paging">下一页</a>
+                    <a class="end" href="" v-on:click="page=paging">尾页</a>
+                </div>
+            </section>
+            <!--分页 end-->
+        </section>
+    </div>
+    <!-- 主体内容 end -->
+    <!-- 公共底部 start -->
+    @Html.Partial("_Bottom")
+    <!-- 公共底部 end -->
+
+    <script src="assets/jquery1.11.2.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="js/public.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.17/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+    <script>
+         var dataDto = JSON.parse('@Html.Raw(dataStr)');
+            //修改系统信息
+            $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
+            $("#logo").css("width", "150px");   //修改尺寸
+            $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
+            $("#record").text(dataDto.systemInfo.record);   //修改备案
+            $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
+            $("#weChatQR").css("width", "130px");   //修改二维码尺寸
+            document.title = dataDto.systemInfo.siteTitle; //修改标题
+            document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
+
+        //Vue
+        var app = new Vue({
+            el: '#app',
+            data: {
+                industries: null,
+                colors: null,
+                products: null,
+                clients: null,
+                cases: null,
+                industryid: null,
+                colorid: null,
+                productid: null,
+                clientid: null,
+                case: null,
+                paging: 0,
+                page: 1,
+                limit: 10
+            },
+            mounted: function () {
+                this.initStyle();
+                this.initData();
+            },
+            methods: {
+                initStyle: function () {
+                    // 展开效果
+                    (function () {
+                        var bool = true;
+                        $('.slider-up').click(function () {
+                            $(this).toggleClass('current');
+                            if (bool) {
+                                bool = false;
+                                var list = $('.list.type');
+                                if (list.hasClass('current')) {
+                                    list.animate({
+                                        height: '87px',
+                                    }, function () {
+                                        bool = true;
+                                    }).removeClass('current');
+
+                                    $(this).html('收起');
+                                } else {
+                                    list.animate({
+                                        height: "29px",
+                                    }, function () {
+                                        bool = true;
+                                    }).addClass('current')
+                                    $(this).html('展开');
+                                }
+                            }
+                        })
+                    })()
+                },
+                initData: function () {
+                    var that = this;
+                    axios.get('@Url.Action("InitData","Case")')
+                        .then(function (response) {
+                            that.industries = response.data.data.industries;
+                            that.colors = response.data.data.colors;
+                            that.products = response.data.data.products;
+                            that.clients = response.data.data.clients;
+                            that.paging = response.data.total == 0 ? 0 : response.data.total <= response.data.limit ? 1 : Math.ceil(response.data.total / response.data.limit);
+                            that.getData();
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+
+                },
+                getData: function () {
+                    var that = this;
+                    that.page = 1;
+                    $.post('@Url.Action("SelectCases","Case")',
+                        {
+                            page: that.page,
+                            limit: that.limit,
+                            industryid: that.industryid,
+                            colorid: that.colorid,
+                            productid: that.productid,
+                            clientid: that.clientid
+                        }, function (data, status) {
+                            that.cases = data.data;
+                            that.paging = data.total == 0 ? 0 : data.total <= data.limit ? 1 : Math.ceil(data.total / data.limit);
+                        });
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

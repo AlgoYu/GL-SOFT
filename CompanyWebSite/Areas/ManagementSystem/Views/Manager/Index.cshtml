@@ -1,0 +1,145 @@
+﻿@using Microsoft.AspNetCore.Http
+@model string
+@{
+    Layout = null;
+    var name = ViewData["name"];
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>格莱软件后台管理</title>
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">格莱软件</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                @*<li class="layui-nav-item"><a href="">控制台</a></li>
+                <li class="layui-nav-item"><a href="">商品管理</a></li>
+                <li class="layui-nav-item"><a href="">用户</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">其它系统</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">邮件管理</a></dd>
+                        <dd><a href="">消息管理</a></dd>
+                        <dd><a href="">授权管理</a></dd>
+                    </dl>
+                </li>*@
+            </ul>
+            <ul class="layui-nav layui-layout-right" lay-filter="setting">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="/images/public/favicon.png" class="layui-nav-img">
+                        @name
+                    </a>
+                    <!--<dl class="layui-nav-child">
+                        <dd><a href="javascript:;">系统设置</a></dd>
+                    </dl>-->
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;" id="logout">安全退出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="Left-Nav">
+                    <li class="layui-nav-item"><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","SystemInfo")" data-id="SystemBaseTab">系统基本设置</a></li>
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;">案例管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","Industry")" data-id="IndustryTab">行业管理</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","Color")" data-id="ColorTab">颜色管理</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","Product")" data-id="ProductTab">产品管理</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","Client")" data-id="ClientTab">客户端管理</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","CaseManager")" data-id="CaseTab">案例管理</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">合作意向管理</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index","CooperManager")" data-id="CooperTab">合作意向表</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index", "CooperTitle")" data-id="CooperTitleTab">标题表</a></dd>
+                            <dd><a href="javascript:;" data-content="/ManagementSystem/@Url.Action("Index", "CooperContent")" data-id="CooperContentTab">子选项表</a></dd>
+                        </dl>
+                    </li>
+                    <!--<li class="layui-nav-item">
+                            <a href="javascript:;">解决方案</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="javascript:;">列表一</a></dd>
+                                <dd><a href="javascript:;">列表二</a></dd>
+                                <dd><a href="javascript:;">超链接</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item"><a href="">云市场</a></li>
+                        <li class="layui-nav-item"><a href="">发布商品</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div class="layui-tab layui-tab-brief" lay-filter="ManagementTab" lay-allowClose="true">
+                <ul class="layui-tab-title">
+                    <li class="layui-this" lay-id="HomeTab">主页</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            底部
+        </div>
+    </div>
+    <script src="/layui/layui.js"></script>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function () {
+            var element = layui.element;
+            var $ = layui.$;
+
+            //左侧导航事件监听
+            element.on('nav(Left-Nav)', function (data) {
+                
+                if (data.context.dataset.id != undefined) {
+                    var temp = $("[lay-id='" + data.context.dataset.id + "']");
+                    if (temp.length == 0) {
+                        tabHeight = window.innerHeight * 0.8;
+                        element.tabAdd("ManagementTab",
+                            {
+                                title: data.context.innerText,
+                                content: '<iframe height="' + tabHeight +'" width="100%" frameborder="0" scrolling="no" src="'+data.context.dataset.content+'"></iframe>',
+                                id: data.context.dataset.id
+                            });
+                        element.tabChange("ManagementTab", data.context.dataset.id);
+                    } else {
+                        element.tabChange("ManagementTab", data.context.dataset.id);
+                    }
+                }
+            });
+
+            element.on('nav(setting)', function(data) {
+                switch (data.context.id) {
+                    case 'logout':
+                        $.post('/ManagementSystem/@Url.Action("Logout","Manager")', {}, (response,status) => {
+                            if (response.status == 200) {
+                                window.location.href = "login";
+                            }
+                        });
+                    break;
+                default:
+                }
+            });
+        });
+    </script>
+</body>
+</html>

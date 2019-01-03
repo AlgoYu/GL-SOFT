@@ -1,0 +1,193 @@
+﻿@model object
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ClientManagement</title>
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <table id="ClientTable" lay-filter="ClientTableContainer"></table>
+        <script src="/layui/layui.js"></script>
+        <!--表工具条-->
+        <script type="text/html" id="ToolBar">
+            <div>
+                <button class="layui-btn" lay-event="AddClient">增加</button>
+                <button class="layui-btn layui-btn-danger" lay-event="DeleteSelectClients">批量删除</button>
+                <div class="layui-input-inline" style="margin-left: 200px">
+                    <input class="layui-input" placeholder="查找ID或名称" id="KeyWord" />
+                </div>
+                <button class="layui-btn layui-btn-normal" lay-event="SearchClients">搜索</button>
+            </div>
+        </script>
+        <!--列工具条-->
+        <script type="text/html" id="ColumnToolBar">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-warm layui-btn-sm" lay-event="EditClient">编辑</button>
+                <button class="layui-btn layui-btn-danger layui-btn-sm" lay-event="DeleteClient">删除</button>
+            </div>
+        </script>
+        <script>
+            layui.use(['jquery','table', 'layer'],
+                function () {
+                //初始化
+                var table = layui.table;
+                var layer = layui.layer;
+                var $ = layui.$;
+                //计算窗口高度
+                var tableHeight = window.innerHeight*0.98;
+                //渲染数据表格
+                var industryTable = table.render({
+                    elem: '#ClientTable',
+                    height: tableHeight,
+                    url: '/ManagementSystem/@Url.Action("SelectClients", "Client")' //数据接口
+                    ,
+                    page: true //开启分页
+                    ,
+                    toolbar: "#ToolBar",
+                    cols: [
+                        [//表头
+                            { field: 'checkbox', type:"checkbox", width: 80, fixed: 'left' },
+                            { field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left' },
+                            { field: 'name', title: '客户端名称', width: 180 },
+                            { field: 'tool', title: '工具条', width: 135, toolbar:"#ColumnToolBar" }
+                        ]
+                    ]
+                    ,
+                    response: {
+                        statusName: 'status' //规定数据状态的字段名称，默认：code
+                        ,statusCode: 200 //规定成功的状态码，默认：0
+                        ,msgName: 'message' //规定状态信息的字段名称，默认：msg
+                        ,countName: 'total' //规定数据总数的字段名称，默认：count
+                        ,dataName: 'data' //规定数据列表的字段名称，默认：data
+                    }
+                });
+
+                //表工具条监听
+                    table.on('toolbar(ClientTableContainer)', function(obj) {
+                    console.log(obj);
+                    switch (obj.event) {
+                        //增加行业
+                        case "AddClient":
+                            layer.prompt({
+                                formType: 0,
+                                title: '请输入新增平台名称'
+                            },function(value, index, elem) {
+                                $.post('/ManagementSystem/@Url.Action("AddClient", "Client")',
+                                    {
+                                        name: value
+                                    },
+                                    function (data, status) {
+                                        if (data.total > 0) {
+                                            layer.msg("添加成功！请去最后一页查看！");
+                                            table.reload("ClientTable");
+                                            layer.close(index);
+                                        } else {
+                                            layer.msg("添加失败！");
+                                        }
+                                    });
+                            });
+                            break;
+                        //批量删除
+                        case "DeleteSelectClients":
+                            var select = table.checkStatus('ClientTable');
+                            if (select.data.length == 0) {
+                                layer.msg("您还未选中！");
+                                return;
+                            }
+                            layer.confirm('真的要删除吗？', {
+                                btn: ['确定', '取消'] //可以无限个按钮
+                            }, function (index, layero) {
+                                layer.close(index);
+                                $.post('/ManagementSystem/@Url.Action("DeleteClients", "Client")',
+                                    {
+                                        clients: select.data
+                                    },
+                                    function (data, status) {
+                                        if (data.total > 0) {
+                                            layer.msg("删除成功！");
+                                            table.reload("ClientTable");
+                                        } else {
+                                            layer.msg("删除失败！");
+                                        }
+                                    });
+                                //按钮【按钮一】的回调
+                            }, function (index) {
+                                layer.close(index);
+                                //按钮【按钮二】的回调
+                            });
+                            break;
+                         //关键字搜索
+                        case "SearchClients":
+                            var value = $("#KeyWord").val();
+
+                            table.reload("ClientTable",
+                                {
+                                    where: {
+                                        keyword: value
+                                    }
+                                });
+                            break;
+                    }
+                });
+
+                //列工具条监听
+                    table.on('tool(ClientTableContainer)', function (obj) {
+                        switch (obj.event) {
+                            //编辑行业
+                            case "EditClient":
+                            layer.prompt({
+                                formType: 0,
+                                title: '请输入修改名称',
+                                value: obj.data.name
+                            },function(value, index, elem) {
+                                $.post('/ManagementSystem/@Url.Action("UpdateClient", "Client")',
+                                    {
+                                        id:obj.data.id,
+                                        name: value
+                                    },
+                                    function (data, status) {
+                                        if (data.total > 0) {
+                                            layer.msg("修改成功！");
+                                            table.reload("ClientTable");
+                                            layer.close(index);
+                                        } else {
+                                            layer.msg("修改失败！");
+                                        }
+                                    });
+                            });
+                            break;
+                        //删除行业
+                            case "DeleteClient":
+                            layer.confirm('真的要删除吗？', {
+                                btn: ['确定', '取消'] //可以无限个按钮
+                            }, function(index, layero){
+                                //按钮【按钮一】的回调
+                                layer.close(index);
+                                $.post('/ManagementSystem/@Url.Action("DeleteClients", "Client")',
+                                    {
+                                        clients: [obj.data]
+                                    },
+                                    function (data, status) {
+                                        if (data.total > 0) {
+                                            layer.msg("删除成功！");
+                                            table.reload("ClientTable");
+                                        } else {
+                                            layer.msg("删除失败！");
+                                        }
+                                    });
+                                }, function (index) {
+                                    layer.close(index);
+                                //按钮【按钮二】的回调
+                            });
+
+                        break;
+                    }
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

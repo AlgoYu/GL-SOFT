@@ -1,0 +1,264 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model object
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式网站 - 格莱软件</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/siteType.css">
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+    <link href="/css/cooper.css" rel="stylesheet" />
+</head>
+
+<body>
+    @Html.Partial("_Cooper")
+    <!-- 公共头部导航 start -->
+    <section class="public-header">
+        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        </a>
+        <div class="hd-r">
+            <div class="hd-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                    </li>
+                    <li class="nav-item cur">
+                        <div class="nav-link" href="javascript:;">网站建设</div>
+                        <ul class="subitems">
+                            <li class="subitem">
+                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hd-tel">
+                <div class="tel-title">售前咨询</div>
+                <div class="tel-num">
+                    <p class="tel-num-t">400-660-8066</p>
+                    <p class="tel-num-b">400-660-5555转1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 公共头部导航 end -->
+    <!-- 主体内容 start -->
+    <section class="xiangy-main">
+        <!-- banner广告 start -->
+        <div class="public-banner">
+            <div class="img-box">
+                <img src="/images/siteType/xiangy/xiangying-banner.png" alt="">
+            </div>
+            <div class="banner-contetn">
+                <div class="banner-wrap">
+                    <h3 class="banner-title">响应式网站</h3>
+                    <p class="banner-desc">自动适应移动设备分辨率，提供更好的阅读体验</p>
+                    <div class="banner-btn">
+                        <a href="" target="_blank">在线咨询</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- banner广告 end -->
+        <!-- 响应式网站的优点 start -->
+        <div class="layer">
+            <h3 class="public-title">响应式网站的优点</h3>
+            <ul class="con-items public-center">
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-1.png" alt="">
+                    <p>加载迅速、节省流量</p>
+                </li>
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-2.png" alt="">
+                    <p>交互流畅、体验更好</p>
+                </li>
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-3.png" alt="">
+                    <p>布局合理、形象统一</p>
+                </li>
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-4.png" alt="">
+                    <p>酷炫H5、无需插件</p>
+                </li>
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-5.png" alt="">
+                    <p>SEO优化，抢占移动搜索</p>
+                </li>
+                <li class="com-item">
+                    <img src="/images/siteType/xiangy/items-advantage-6.png" alt="">
+                    <p>数据同步、维护简单</p>
+                </li>
+            </ul>
+        </div>
+        <!-- 响应式网站的优点 end -->
+        <!-- 想怎么看，就怎么看 start -->
+        <div class="layer">
+            <h3 class="public-title">想怎么看，就怎么看</h3>
+            <div class="img-block">
+                <img src="/images/siteType/xiangy/items-show-1.png" alt="img">
+            </div>
+        </div>
+        <div class="img-box1 img-items">
+            <img src="/images/siteType/xiangy/items-show-2.png" alt="img">
+        </div>
+        <div class="img-box2 img-items">
+            <img src="/images/siteType/xiangy/items-show-3.png" alt="img">
+        </div>
+        <!-- 想怎么看，就怎么看 end -->
+
+    </section>
+    <!-- 主体内容 end -->
+    <!-- 公共 - 更多服务 start -->
+    <section class="public-more-service">
+        <div class="form-block">
+            <div class="form-title">
+                填写您的需求，我们免费为您定制方案并获取
+                <span class="small">1000-3000元</span>优惠
+            </div>
+            <div class="form-wrap">
+                <form class="form-box">
+                    <div class="form-content">
+                        <div class="inp-textarea">
+                            <textarea class="remark" name="remark" placeholder="我的需求"></textarea>
+                        </div>
+                        <div class="inp-group">
+                            <div class="inp-row">
+                                <input type="text" name="company" placeholder="单位名称" value="">
+                            </div>
+                            <div class="inp-row">
+                                <input type="text" name="truename" placeholder="联系人姓名" value="">
+                                <input type="text" name="mobile" placeholder="回访电话" value="">
+                            </div>
+                            <div class="inp-row">
+                                <input type="text" name="verify" placeholder="验证码">
+                                <a href="javascript:void(0);">
+                                    <img src="/images/public/yzm_null.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-btn">
+                        <button type="button">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- 公共 - 更多服务 end -->
+    @Html.Partial("_Help")
+    <!-- 公共底部 start -->
+    @Html.Partial("_Bottom")
+    <!-- 公共底部 end -->
+
+<script src="/assets/jquery1.11.2.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="/js/public.js"></script>
+
+    <script>
+        // 服务套餐
+        $('.service-title').on('click', function () {
+            $(this).toggleClass('cur');
+            $(this).siblings('.service-list').slideToggle()
+        })
+    </script>
+<script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    var dataDto = JSON.parse('@Html.Raw(dataStr)');
+
+    //修改系统信息
+    $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
+    $("#logo").css("width", "150px");   //修改尺寸
+    $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
+    $("#record").text(dataDto.systemInfo.record);   //修改备案
+    $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
+    $("#weChatQR").css("width", "130px");   //修改二维码尺寸
+    document.title = dataDto.systemInfo.siteTitle; //修改标题
+    document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
+
+    layui.use(['form','jquery','layer'], function () {
+        var form = layui.form;
+        var $ = layui.$;
+        var layer = layui.layer;
+
+        $("#cooper").on("click", function(data) {
+            $("#app").css("display", "block");
+            $("#app").css("animation", "cooperation-animation 1.2s");
+        });
+
+        //合作意向表单渲染
+        var app = new Vue({
+            el: '#app',
+            data: {
+                titles: dataDto.cooperData
+            },
+            mounted: function () {
+                form.render();
+            }
+        });
+
+
+        form.on("submit(commit)", function (data) {
+            var details = $(":checked");
+            var detail = "";
+            for (var i = 0; i < details.length; i++) {
+                detail += details[i].value + " | ";
+            }
+            data.field.detail = detail;
+            console.log(data);
+            $.post('@Url.Action("AddCooper","Cooper")', data.field, function(data,status) {
+                if (data.data == 1) {
+                    layer.msg("提交成功！请等待我们联系您！");
+                    $('#app').css('display', 'none');
+                } else {
+                    layer.msg("提交失败！");
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+﻿<div id="app" class="cooperation-area">
+    <i class="layui-icon layui-icon-close-fill" style="color: red; float: right; font-size: 20px;" onclick="$('#app').css('display','none');"></i>
+    <div class="center-content"><h1 style="font-size: 20px; margin-top: 20px; margin-bottom: 20px;">合作意向表</h1></div>
+    <form class="layui-form layui-form-pane">
+        <div class="layui-form-item">
+            <label class="layui-form-label">公司名称：</label>
+            <div class="layui-input-block">
+                <input class="layui-input" lay-verify="required" name="company" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">邮箱地址：</label>
+            <div class="layui-input-block">
+                <input class="layui-input" lay-verify="required|email" name="email" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名：</label>
+            <div class="layui-input-block">
+                <input class="layui-input" lay-verify="required" name="linkman" />
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">电话：</label>
+            <div class="layui-input-block">
+                <input class="layui-input" lay-verify="required|phone" name="contact" />
+            </div>
+        </div>
+        <div class="layui-form-item options">
+            <div v-for="title in titles">
+                <h1 style="font-size: 15px">{{title.name}}</h1>
+                <div>
+                    <input v-for="content in title.cooperationContents" :type="title.type==1?'checkbox':'radio'" :name="title.type==1?'detail':title.id" :title="content.name" class="layui-input" :value="content.name" />
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <button type="button" class="layui-btn layui-btn-fluid" lay-submit lay-filter="commit">提交需求</button>
+        </div>
+    </form>
+</div>

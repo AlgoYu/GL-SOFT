@@ -1,0 +1,317 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model object
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>经典型网站 - 格莱软件</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+    <link href="/css/cooper.css" rel="stylesheet" />
+</head>
+
+<body>
+@Html.Partial("_Cooper")
+<!-- 公共头部导航 start -->
+    <section class="public-header">
+        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
+            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        </a>
+        <div class="hd-r">
+            <div class="hd-nav">
+                <ul class="nav-list">
+                    <li class="nav-item cur">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link" href="javascript:;">网站建设</div>
+                        <ul class="subitems">
+                            <li class="subitem">
+                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
+                            </li>
+                            <li class="subitem">
+                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hd-tel">
+                <div class="tel-title">售前咨询</div>
+                <div class="tel-num">
+                    <p class="tel-num-t">400-660-8066</p>
+                    <p class="tel-num-b">400-660-5555转1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 公共头部导航 end -->
+    <!-- 主体内容 start -->
+    <section class="mobile-app">
+        <!-- banner广告 start -->
+        <section class="p-banner">
+            <div class="banner-con">
+                <h3 class="banner-tit">移动端产品锐不可当</h3>
+                <p class="banner-desc">拥有移动端应用是企业发展必行之路，APP、微信公众号、小程序等应用专属功能专属定制</p>
+                <div class="banner-btn">
+                    <a href="" target="_blank">在线咨询</a>
+                </div>
+            </div>
+        </section>
+        <!-- banner广告 end -->
+        <section class="items">
+            <div class="block-1">
+                <h3 class="items-title">移动端应用定制服务</h3>
+                <ul class="list">
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-1.png">
+                        <p class="item-p">手机App</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-2.png">
+                        <p class="item-p">微信公众号</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-3.png">
+                        <p class="item-p">微信小程序</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-4.png">
+                        <p class="item-p">移动端网站</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-5.png">
+                        <p class="item-p">IOS</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-6.png">
+                        <p class="item-p">Android</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-7.png">
+                        <p class="item-p">Windows</p>
+                    </li>
+                    <li class="item">
+                        <img class="item-img" src="/images/mobile/app/shoujiyingyong-show-1-8.png">
+                        <p class="item-p">Symbian</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="items">
+            <div class="block-2">
+                <h3 class="items-title">我们的优势</h3>
+                <div class="img-box">
+                    <img src="http://s.300.cn/v2.0/home/images/special/shoujiyingyong/shoujiyingyong-show-2.png" alt="img">
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+    <!-- 主体内容 end -->
+
+    <section class="main-steps">
+        <div class="steps-wrap public-center">
+            <div class="steps-title">8大标准环节 确保品质服务</div>
+            <ul class="steps-list">
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-officer.png" alt="img">
+                    </div>
+                    <p class="item-title">商务代表</p>
+                    <p class="item-p">售前咨询</p>
+                    <p class="item-p">确认需求</p>
+                    <p class="item-p">签订合同</p>
+                    <p class="item-p">联络沟通</p>
+                </li>
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-designer.png" alt="img">
+                    </div>
+                    <p class="item-title">视觉设计师</p>
+                    <p class="item-p">和您沟通细节</p>
+                    <p class="item-p">向您收集资料</p>
+                    <p class="item-p">提交设计样稿</p>
+                    <p class="item-p">约5个工作日</p>
+                </li>
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-manager.png" alt="img">
+                    </div>
+                    <p class="item-title">设计经理</p>
+                    <p class="item-p">验收设计稿</p>
+                </li>
+
+
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-front.png" alt="img">
+                    </div>
+                    <p class="item-title">前端工程师</p>
+                    <p class="item-p">制作页面</p>
+                    <p class="item-p">开发功能</p>
+                    <p class="item-p">实现效果</p>
+                    <p class="item-p">10-15个工作日</p>
+                </li>
+
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-engineer.png" alt="img">
+                    </div>
+                    <p class="item-title">质检工程师</p>
+                    <div class="item-group">
+                        <div class="item-box">
+                            <p class="item-p">客户需求核对</p>
+                            <p class="item-p">功能测试</p>
+                            <p class="item-p">展示效果验证</p>
+                            <p class="item-p">网站性能测试</p>
+                        </div>
+                        <div class="item-box">
+                            <p class="item-p">合规性检查</p>
+                            <p class="item-p">技术规范检查</p>
+                            <p class="item-p">第三方业务验证</p>
+                            <p class="item-p">3-5个工作日</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-officer.png" alt="img">
+                    </div>
+                    <p class="item-title">商务代表</p>
+                    <p class="item-p">请您验收</p>
+                    <p class="item-p">转运维部门</p>
+                    <p class="item-p">转客服部门</p>
+                </li>
+
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-engineer.png" alt="img">
+                    </div>
+                    <p class="item-title">运维工程师</p>
+                    <p class="item-p">网站上线</p>
+                    <p class="item-p">网络、服务器保障</p>
+                    <p class="item-p">平台升级、故障排除</p>
+                    <p class="item-p">病毒、黑客防范</p>
+                </li>
+                <li class="steps-item">
+                    <div class="img-box">
+                        <img src="/images/index/items-steps-cc.png" alt="img">
+                    </div>
+                    <p class="item-title">客服专员</p>
+                    <p class="item-p">解答疑问</p>
+                    <p class="item-p">使用指导</p>
+                    <p class="item-p">友情提示</p>
+                    <p class="item-p">协助内容维护</p>
+                </li>
+
+                <li class="stpes-line">
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                    <div class="line-step"></div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 公共 - 更多服务 start -->
+    <!-- 公共 - 更多服务 end -->
+    @Html.Partial("_Help")
+    <!-- 公共底部 start -->
+    @Html.Partial("_Bottom")
+    <!-- 公共底部 end -->
+
+<script src="/assets/jquery1.11.2.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="/js/public.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
+<script src="/layui/layui.js"></script>
+<script>
+    var dataDto = JSON.parse('@Html.Raw(dataStr)');
+    layui.use(['form','jquery','layer'], function () {
+        var form = layui.form;
+        var $ = layui.$;
+        var layer = layui.layer;
+
+        $("#cooper").on("click", function(data) {
+            $("#app").css("display", "block");
+            $("#app").css("animation", "cooperation-animation 1.2s");
+        });
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                titles: data
+            },
+            mounted: function() {
+                form.render();
+            }
+        });
+
+        form.on("submit(commit)", function (data) {
+            var details = $(":checked");
+            var detail = "";
+            for (var i = 0; i < details.length; i++) {
+                detail += details[i].value + " | ";
+            }
+            data.field.detail = detail;
+            console.log(data);
+            $.post('@Url.Action("AddCooper","Cooper")', data.field, function(data,status) {
+                if (data.data == 1) {
+                    layer.msg("提交成功！请等待我们联系您！");
+                    $('#app').css('display', 'none');
+                } else {
+                    layer.msg("提交失败！");
+                }
+            });
+
+            return false;
+        });
+    });
+</script>
+</body>
+
+</html>

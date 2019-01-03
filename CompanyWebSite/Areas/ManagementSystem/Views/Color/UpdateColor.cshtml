@@ -1,0 +1,83 @@
+﻿@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@model CompanyWebSite.Areas.ManagementSystem.Models.Color;
+@{
+    Layout = null;
+    var serializerSettings = new JsonSerializerSettings
+    {
+        // 设置为驼峰命名
+        ContractResolver = new CamelCasePropertyNamesContractResolver()
+    };
+    var colorStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ColorManagement</title>
+    <link href="/layui/css/layui.css" rel="stylesheet" />
+    <style>
+        .wh {
+            width: 100%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .input-style {
+            width: 80%;
+            margin: 6px auto;
+        }
+    </style>
+</head>
+<body>
+    <!--颜色编辑对话框-->
+    <div id="ColorDialog" class="wh">
+        <div class="input-style">
+            <input class="layui-input" placeholder="请输入颜色名字" id="colorName" />
+        </div>
+        <div class="input-style">
+            <input class="layui-input" placeholder="请输入颜色值" id="colorValue" />
+        </div>
+        <div class="layui-btn-container center input-style">
+            <button class="layui-btn layui-btn-primary" id="cancel">取消</button>
+            <button class="layui-btn" id="save">保存</button>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        color = JSON.parse('@Html.Raw(colorStr)');
+        //设置值
+        $("#colorName").val(color.name);
+        var colorValue = $("#colorValue").val(color.value);
+
+        var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+        $("#cancel").click(function () {
+            parent.layer.close(index); //执行关闭
+        });
+        $("#save").click(function () {
+            var colorName = $("#colorName").val();
+            var colorValue = $("#colorValue").val();
+            if (colorName == "" || colorValue == "") {
+                alert("不能为空值");
+            } else {
+                $.post("/ManagementSystem/Color/UpdateColor",
+                    {
+                        id: color.id,
+                        name: colorName,
+                        value: colorValue
+                    }, function (data, status) {
+                        if (data.total > 0) {
+                            parent.layer.close(index); //执行关闭
+                            parent.layer.msg("修改成功！");
+                            parent.layui.table.reload("ColorTable");
+                        } else {
+                            parent.layer.msg("修改失败！");
+                        }
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
