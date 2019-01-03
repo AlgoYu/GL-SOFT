@@ -1,4 +1,8 @@
 #upload directory
 CompanyWebSite/wwwroot/upload/
+
 #release directory
 CompanyWebSite/bin/
+
+#temp file directory
+CompanyWebSite/obj/
