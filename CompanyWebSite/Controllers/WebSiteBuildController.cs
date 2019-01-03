@@ -76,6 +76,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.WebSiteBuild;
             return View(dataDto);
         }
 
@@ -139,6 +141,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.WebSiteBuild;
             return View(dataDto);
         }
         public IActionResult ResponseType()
@@ -201,6 +205,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.WebSiteBuild;
             return View(dataDto);
         }
         public IActionResult DirSir()
@@ -263,6 +269,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.WebSiteBuild;
             return View(dataDto);
         }
         public IActionResult Dress()
@@ -325,6 +333,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.WebSiteBuild;
             return View(dataDto);
         }
     }

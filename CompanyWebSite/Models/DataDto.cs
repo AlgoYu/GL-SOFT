@@ -6,9 +6,12 @@ using CompanyWebSite.Areas.ManagementSystem.Models;
 
 namespace CompanyWebSite.Models
 {
-    //传输给前端的数据
+    /// <summary>
+    /// 传给前端的数据封装
+    /// </summary>
     public class DataDto
     {
+        public CurrentIndex index { get; set; } = CurrentIndex.Home;
         public object CooperData { get; set; }
         public object Cases { get; set; }
         public SystemInfo SystemInfo { get; set; }

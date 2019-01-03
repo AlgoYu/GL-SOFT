@@ -1,6 +1,6 @@
 ﻿@using Newtonsoft.Json
 @using Newtonsoft.Json.Serialization
-@model object
+@model DataDto
 @{
     Layout = null;
     var serializerSettings = new JsonSerializerSettings
@@ -14,7 +14,7 @@
 <html lang="en">
 
 <head>
-    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="keywords" content="@Model.SystemInfo.KeyWords" /><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>经典型网站 - 格莱软件</title>
@@ -209,15 +209,15 @@
 <script src="/layui/layui.js"></script>
 <script>
     var dataDto = JSON.parse('@Html.Raw(dataStr)');
-    //修改系统信息
-    $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
+    //当前选择导航页设置
+    $('.nav-list .nav-item').each(function (i, v) {
+        if ($(v).data("index") === dataDto.index) {
+            $(v).addClass("cur");
+        }
+    })
+    //修改图片尺寸
     $("#logo").css("width", "150px");   //修改尺寸
-    $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
-    $("#record").text(dataDto.systemInfo.record);   //修改备案
-    $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
     $("#weChatQR").css("width", "130px");   //修改二维码尺寸
-    document.title = dataDto.systemInfo.siteTitle; //修改标题
-    document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
     layui.use(['form','jquery','layer'], function () {
         var form = layui.form;
         var $ = layui.$;

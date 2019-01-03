@@ -1,25 +1,20 @@
-﻿@model object
-@{
-    ViewData["Title"] = "Bottom";
-    Layout = null;
-}
-<!-- 公共底部 start -->
+﻿<!-- 公共底部 start -->
 <section class="public-footer">
     <div class="ft-wrap public-center">
         <div class="ft-left">
             <div class="links">
-                <a href="">联系我们</a> &nbsp;|&nbsp;
+                <!--<a href="">联系我们</a> &nbsp;|&nbsp;-->
                 <a href="@Url.Action("Index","NetWork")">全国网点</a> &nbsp;|&nbsp;
                 <a href='@Url.Action("Index","About")'>关于我们</a>
             </div>
             <div class="copyringht">
-                <p id="copyright">版权所有 © 1999-2018 中企动力科技股份有限公司 Copyright © 1999-2018 300.cn All Rights Reserved</p>
-                <p id="record">京公网安备11030102010293号 京ICP证010249-2</p>
+                <p id="copyright">@Model.SystemInfo.Copyright</p>
+                <p id="record">@Model.SystemInfo.Record</p>
             </div>
         </div>
         <div class="ft-right">
             <div class="img-box">
-                <img src="/images/public/qr-1.png" alt="img" id="weChatQR">
+                <img src="@Model.SystemInfo.WeChatQR" alt="img" id="weChatQR">
             </div>
             <!--<div class="img-box">
         <img src="/images/public/qr-2.png" alt="img">

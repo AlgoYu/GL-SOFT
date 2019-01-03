@@ -76,6 +76,8 @@ namespace CompanyWebSite.Controllers
             dataDto.Cases = caseData.OrderBy(x => x.ID).Skip(0).Take(8).ToList();
             //获取系统信息数据
             dataDto.SystemInfo = _db.SystemInfo.SingleOrDefault();
+            //当前导航页面
+            dataDto.index = CurrentIndex.Case;
             return View(dataDto);
         }
 
@@ -148,6 +150,8 @@ namespace CompanyWebSite.Controllers
                 Industries = x.IndustryCases.Select(i => i.Industry.Name)
             }).FirstOrDefault(x => x.ID == id);
             dataDto.caseDetail = caseDetail;
+            //当前导航页面
+            dataDto.index = CurrentIndex.Case;
             return View(dataDto);
         }
 

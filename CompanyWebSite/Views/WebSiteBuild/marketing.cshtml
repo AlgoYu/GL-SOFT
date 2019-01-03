@@ -1,6 +1,6 @@
 ﻿@using Newtonsoft.Json
 @using Newtonsoft.Json.Serialization
-@model object
+@model DataDto
 @{
     Layout = null;
     var serializerSettings = new JsonSerializerSettings
@@ -14,7 +14,7 @@
 <html lang="en">
 
 <head>
-    <meta name="keywords" content="xiaoyu" /><meta charset="UTF-8">
+    <meta name="keywords" content="@Model.SystemInfo.KeyWords" /><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>营销型网站 - 格莱软件</title>
@@ -25,63 +25,8 @@
 </head>
 
 <body>
-@Html.Partial("_Cooper")
-<!-- 公共头部导航 start -->
-    <section class="public-header">
-        <a class="hd-logo-link" href="@Url.Action("Index","Home")">
-            <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
-        </a>
-        <div class="hd-r">
-            <div class="hd-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
-                    </li>
-                    <li class="nav-item cur">
-                        <div class="nav-link" href="javascript:;">网站建设</div>
-                        <ul class="subitems">
-                            <li class="subitem">
-                                <a href="@Url.Action("Classic","WebSiteBuild")" class="subitem-link">经典型网站</a>
-                            </li>
-                            <li class="subitem">
-                                <a href="@Url.Action("Marketing","WebSiteBuild")" class="subitem-link">营销型网站</a>
-                            </li>
-                            <li class="subitem">
-                                <a href="@Url.Action("ResponseType","WebSiteBuild")" class="subitem-link">响应式网站</a>
-                            </li>
-                            <li class="subitem">
-                                <a href="@Url.Action("DirSir","WebSiteBuild")" class="subitem-link">电商型网站</a>
-                            </li>
-                            <li class="subitem">
-                                <a href="@Url.Action("Dress","WebSiteBuild")" class="subitem-link">外贸型网站</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="hd-tel">
-                <div class="tel-title">售前咨询</div>
-                <div class="tel-num">
-                    <p class="tel-num-t">400-660-8066</p>
-                    <p class="tel-num-b">400-660-5555转1</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- 公共头部导航 end -->
+    @Html.Partial("_Cooper")
+    @Html.Partial("_Head")
     <!-- 主体内容 start -->
     <section class="yingxiao-main">
         <!-- banner广告 start -->
@@ -424,13 +369,13 @@
         </div>
     </section>
     <!-- 公共 - 更多服务 end -->
-@Html.Partial("_Help")
+    @Html.Partial("_Help")
     <!-- 公共底部 start -->
     @Html.Partial("_Bottom")
     <!-- 公共底部 end -->
 
-<script src="/assets/jquery1.11.2.js"></script>
-<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="/assets/jquery1.11.2.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="/js/public.js"></script>
     <script>
         // 晋级功能
@@ -444,19 +389,19 @@
             })
         });
     </script>
-<script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
-<script src="/layui/layui.js"></script>
-<script>
-    var dataDto = JSON.parse('@Html.Raw(dataStr)');
-    //修改系统信息
-    $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
-    $("#logo").css("width", "150px");   //修改尺寸
-    $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
-    $("#record").text(dataDto.systemInfo.record);   //修改备案
-    $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
-    $("#weChatQR").css("width", "130px");   //修改二维码尺寸
-    document.title = dataDto.systemInfo.siteTitle; //修改标题
-    document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
+    <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
+    <script src="/layui/layui.js"></script>
+    <script>
+        var dataDto = JSON.parse('@Html.Raw(dataStr)');
+        //当前选择导航页设置
+        $('.nav-list .nav-item').each(function (i, v) {
+            if ($(v).data("index") === dataDto.index) {
+                $(v).addClass("cur");
+            }
+        })
+        //修改图片尺寸
+        $("#logo").css("width", "150px");   //修改尺寸
+        $("#weChatQR").css("width", "130px");   //修改二维码尺寸
 
     layui.use(['form','jquery','layer'], function () {
         var form = layui.form;
@@ -507,7 +452,7 @@
             return false;
         });
     });
-</script>
+    </script>
 </body>
 
 </html>

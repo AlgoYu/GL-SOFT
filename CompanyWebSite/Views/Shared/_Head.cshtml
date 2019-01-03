@@ -1,21 +1,15 @@
-﻿@model object
-@{
-    ViewData["Title"] = "Head";
-    Layout = null;
-}
-
-<!-- 公共头部导航 start -->
+﻿<!-- 公共头部导航 start -->
 <section class="public-header">
     <a class="hd-logo-link" href="@Url.Action("Index","Home")">
-        <img class="hd-logo-img" src="/images/public/logo.png" alt="" id="logo">
+        <img class="hd-logo-img" src="@Model.SystemInfo.LogoUrl" alt="">
     </a>
     <div class="hd-r">
         <div class="hd-nav">
             <ul class="nav-list">
-                <li class="nav-item">
+                <li class="nav-item" data-index="0">
                     <a class="nav-link" href="@Url.Action("Index","Home")">首页</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-index="1">
                     <div class="nav-link" href="javascript:;">网站建设</div>
                     <ul class="subitems">
                         <li class="subitem">
@@ -35,16 +29,16 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-index="2">
                     <a class="nav-link" href="@Url.Action("Index","Offer")">建站报价</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-index="3">
                     <a class="nav-link" href="@Url.Action("Index","Case")">客户案例</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-index="4">
                     <a class="nav-link" href="@Url.Action("Index","NetWork")">全国网点</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" data-index="5">
                     <a class="nav-link" href="@Url.Action("Index","About")">关于我们</a>
                 </li>
             </ul>
