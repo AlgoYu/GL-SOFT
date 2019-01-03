@@ -187,6 +187,15 @@
 <script src="/layui/layui.js"></script>
 <script>
     var dataDto = JSON.parse('@Html.Raw(dataStr)');
+    //修改系统信息
+    $("#logo").attr("src", dataDto.systemInfo.logoUrl); //修改Logo
+    $("#logo").css("width", "150px");   //修改尺寸
+    $("#copyright").text(dataDto.systemInfo.copyright); //修改版权
+    $("#record").text(dataDto.systemInfo.record);   //修改备案
+    $("#weChatQR").attr("src", dataDto.systemInfo.weChatQR);   //修改二维码
+    $("#weChatQR").css("width", "130px");   //修改二维码尺寸
+    document.title = dataDto.systemInfo.siteTitle; //修改标题
+    document.getElementsByTagName("meta")[0].content = dataDto.systemInfo.keyWords;   //修改网站关键字
     layui.use(['form','jquery','layer'], function () {
         var form = layui.form;
         var $ = layui.$;
@@ -197,12 +206,13 @@
             $("#app").css("animation", "cooperation-animation 1.2s");
         });
 
+        //合作意向表单渲染
         var app = new Vue({
             el: '#app',
             data: {
-                titles: data
+                titles: dataDto.cooperData
             },
-            mounted: function() {
+            mounted: function () {
                 form.render();
             }
         });

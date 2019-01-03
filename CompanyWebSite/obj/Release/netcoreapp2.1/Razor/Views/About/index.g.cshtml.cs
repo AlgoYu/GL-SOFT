@@ -76,7 +76,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
             EndContext();
             BeginContext(398, 467, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5164eeb05bc74f1c96710d31b2ea751e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "96800fc13bbb41558186faac74901299", async() => {
                 BeginContext(404, 454, true);
                 WriteLiteral(@"
     <meta name=""keywords"" content=""xiaoyu"" /><meta charset=""UTF-8"">
@@ -105,7 +105,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(869, 11023, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32ba3310c36a4981a0500ca4d8340f5d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "06be24210d3941b6a7be0ff4139e0706", async() => {
                 BeginContext(875, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();

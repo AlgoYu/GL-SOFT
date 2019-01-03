@@ -43,7 +43,7 @@ namespace AspNetCore
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(42, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc4e7d47925b42f082aa9240627a9e7b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab8182a84776403891d831dff697a301", async() => {
                 BeginContext(48, 190, true);
                 WriteLiteral("\r\n    <title>AddCooperTitlePage</title>\r\n    <link href=\"/layui/css/layui.css\" rel=\"stylesheet\" />\r\n    <style>\r\n        .center {\r\n            text-align: center;\r\n        }\r\n    </style>\r\n");
                 EndContext();
@@ -63,7 +63,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(247, 2252, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8e4f7a056d0748a4b6484caab350f014", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62e1496130a04fc29eb93a9fbda4292a", async() => {
                 BeginContext(253, 2239, true);
                 WriteLiteral(@"
     <!--对话框-->

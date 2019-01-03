@@ -55,7 +55,7 @@ using CompanyWebSite.Models;
             WriteLiteral("<section class=\"form-block\">\r\n    <div class=\"form-title\">\r\n        填写您的需求，我们免费为您定制方案并获取\r\n        <span class=\"small\">1000-3000元</span>优惠\r\n    </div>\r\n    <div class=\"form-wrap\">\r\n        ");
             EndContext();
             BeginContext(188, 1148, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "114462d1d4ba4c86ac9015604da84b09", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "47e6358df8a54219b6141fe117b6c101", async() => {
                 BeginContext(211, 1118, true);
                 WriteLiteral(@"
             <div class=""form-content"">

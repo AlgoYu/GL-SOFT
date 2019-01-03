@@ -56,7 +56,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(135, 263, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ac03f9f0a5a744e2bf177d501569301b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8012b95b0bb04614874cb2ea0133e6cf", async() => {
                 BeginContext(141, 250, true);
                 WriteLiteral("\r\n    <meta name=\"keywords\" content=\"xiaoyu\" /><meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\r\n    <title>格莱软件后台管理</title>\r\n    <link href=\"/layui/css/layui.css\" rel=\"stylesheet\" />\r\n");
                 EndContext();
@@ -76,7 +76,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(400, 6682, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5fc2b83c7258478e88838f3a9699533f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c6eb98e943649bdb60d089444bef249", async() => {
                 BeginContext(432, 235, true);
                 WriteLiteral("\r\n    <div class=\"layui-layout layui-layout-admin\">\r\n        <div class=\"layui-header\">\r\n            <div class=\"layui-logo\">格莱软件</div>\r\n            <!-- 头部区域（可配合layui已有的水平导航） -->\r\n            <ul class=\"layui-nav layui-layout-left\">\r\n");
                 EndContext();

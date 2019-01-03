@@ -65,7 +65,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(434, 347, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a7cae7abb1264aeb85ba053f1ab5f29e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2d66047c3fde4d7eba7241690ba7987f", async() => {
                 BeginContext(440, 334, true);
                 WriteLiteral(@"
     <title>ColorManagement</title>
@@ -102,7 +102,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(783, 1954, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "29180f28d5b449bcb459b67d3acd2805", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c99e46a441fd4c99ba2b46cbe9437166", async() => {
                 BeginContext(789, 677, true);
                 WriteLiteral(@"
     <!--颜色编辑对话框-->

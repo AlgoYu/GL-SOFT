@@ -64,7 +64,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(370, 4562, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5211c05eb98d4eafa0557fed5b98c10c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "57b37dadb4a94b9f99d994379ea5040f", async() => {
                 BeginContext(376, 3908, true);
                 WriteLiteral(@"
     <title>AddCase</title>
@@ -228,7 +228,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(4934, 10579, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "91861d910b084916a22b93ee8559c80d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c1bb9a4e60c49568fdbf7c065ee765f", async() => {
                 BeginContext(4940, 2510, true);
                 WriteLiteral(@"
     <form class=""layui-form layui-form-pane"" lay-filter=""caseContainer"">

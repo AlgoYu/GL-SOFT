@@ -62,7 +62,7 @@ using CompanyWebSite.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             BeginContext(0, 222, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d23d139b85847cc8ffdc74ecb1928cf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e01c54cae7a44c26b7aaaf47a6a2b717", async() => {
                 BeginContext(35, 173, true);
                 WriteLiteral("\r\n    <script src=\"/lib/jquery-validation/dist/jquery.validate.js\"></script>\r\n    <script src=\"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js\"></script>\r\n");
                 EndContext();
@@ -84,12 +84,12 @@ using CompanyWebSite.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(224, 942, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6fc95bbd683845f3a121129ac60755b2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("environment", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0aad8504ff2b4d8f9183641f502aa25b", async() => {
                 BeginContext(259, 6, true);
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(265, 398, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62a650deb90f432d9fbcff2b58b1b97d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "08b8f1f3e54a4712afd5399bd4795707", async() => {
                     BeginContext(648, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();
@@ -117,7 +117,7 @@ using CompanyWebSite.Models;
                 WriteLiteral("\r\n    ");
                 EndContext();
                 BeginContext(669, 481, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f19e94dd7ab46998bc23c9c8130df21", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("script", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "724c3c3de4c9412b962ed907279b0d22", async() => {
                     BeginContext(1135, 6, true);
                     WriteLiteral("\r\n    ");
                     EndContext();

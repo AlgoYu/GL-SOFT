@@ -43,7 +43,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(44, 4458, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3eeb3b8db3ca421aa4c994e06a8b8479", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25f6cb410d3844e9afb9cbf98aac4cb3", async() => {
                 BeginContext(50, 3886, true);
                 WriteLiteral(@"
     <title>AddCase</title>
@@ -205,7 +205,7 @@ namespace AspNetCore
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(4504, 10371, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d8db7365c7d8432fba22d34b02738b77", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d7fca33d500c49dda1cdc23517bc0525", async() => {
                 BeginContext(4510, 3052, true);
                 WriteLiteral(@"
     <form class=""layui-form layui-form-pane"">

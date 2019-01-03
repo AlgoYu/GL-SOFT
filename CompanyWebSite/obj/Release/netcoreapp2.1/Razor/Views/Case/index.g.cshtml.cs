@@ -76,7 +76,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
             EndContext();
             BeginContext(398, 357, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6ec728e0616c477993c85f5c56e26264", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5e435b3e276840f5877d1a322efb0f79", async() => {
                 BeginContext(404, 344, true);
                 WriteLiteral(@"
     <meta name=""keywords"" content=""xiaoyu"" />
@@ -104,7 +104,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(759, 12065, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "959073e85bc94346a90778c93d6521f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5f2596d909eb4a95a7e2a55007d927bf", async() => {
                 BeginContext(765, 97, true);
                 WriteLiteral("\r\n    <!-- 公共头部导航 start -->\r\n    <section class=\"public-header\">\r\n        <a class=\"hd-logo-link\"");
                 EndContext();

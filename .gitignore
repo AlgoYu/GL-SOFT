@@ -1,2 +1,4 @@
 #upload directory
 CompanyWebSite/wwwroot/upload/
+#release directory
+CompanyWebSite/bin/

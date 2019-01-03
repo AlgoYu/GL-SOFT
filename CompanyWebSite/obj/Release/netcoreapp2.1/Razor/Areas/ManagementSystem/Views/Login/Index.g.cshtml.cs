@@ -50,7 +50,7 @@ namespace AspNetCore
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(108, 8288, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc8d14a770c34942937bf541c33df91d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7131b8eb4444e2aa36e8960d2acb4a7", async() => {
                 BeginContext(114, 443, true);
                 WriteLiteral(@"
 
@@ -399,7 +399,7 @@ namespace AspNetCore
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(8400, 5772, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfec1e45be8547dfbd88221f723a294d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9ea202946b847aa81d84138bf845e77", async() => {
                 BeginContext(8406, 113, true);
                 WriteLiteral("\r\n\t<script>\r\n        if (window.parent.window !== window) {\r\n            window.parent.document.location.href = \'");
                 EndContext();

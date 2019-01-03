@@ -80,7 +80,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n");
             EndContext();
             BeginContext(398, 597, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1e43a7c61b9147d3a2ee3a4e7e2e1ca0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "26e9bf4f6380497e99f77496697f4308", async() => {
                 BeginContext(404, 584, true);
                 WriteLiteral(@"
     <meta name=""keywords"" content=""xiaoyu"" /><meta charset=""UTF-8"">
@@ -111,7 +111,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(999, 45288, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0310c826ed1c4ff2ad3a958b2c17249d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bfbb87c1148e4ae49bc56b8f608f65b1", async() => {
                 BeginContext(1005, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
@@ -899,7 +899,7 @@ WriteAttributeValue("", 19283, Url.Action("App","Mobile"), 19283, 27, false);
                         ");
                 EndContext();
                 BeginContext(40905, 1092, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c41e4017702b43fabfe5f39f6c9d21d7", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34cd32a796d14e03ad9f563184256328", async() => {
                     BeginContext(40939, 1051, true);
                     WriteLiteral(@"
                             <div class=""form-group"">

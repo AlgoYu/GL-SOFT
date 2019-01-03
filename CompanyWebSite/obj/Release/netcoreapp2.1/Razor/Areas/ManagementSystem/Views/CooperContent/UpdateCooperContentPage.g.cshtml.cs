@@ -65,7 +65,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(388, 203, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4e7ff7feb3e43ceac2b0e29d4c63bb7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "20e61c7a22454c2580b467a301b0fd67", async() => {
                 BeginContext(394, 190, true);
                 WriteLiteral("\r\n    <title>AddCooperTitlePage</title>\r\n    <link href=\"/layui/css/layui.css\" rel=\"stylesheet\" />\r\n    <style>\r\n        .center {\r\n            text-align: center;\r\n        }\r\n    </style>\r\n");
                 EndContext();
@@ -85,7 +85,7 @@ using Newtonsoft.Json.Serialization;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(593, 2746, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "126545cb04c944a394d0eb7982a7039a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f867ea06680a48a9847f82bc74abf364", async() => {
                 BeginContext(599, 1276, true);
                 WriteLiteral(@"
     <!--对话框-->
