@@ -95,39 +95,7 @@
     <!-- 主体内容 end -->
     <!-- 公共 - 更多服务 start -->
     <section class="public-more-service">
-        <div class="form-block">
-            <div class="form-title">
-                填写您的需求，我们免费为您定制方案并获取
-                <span class="small">1000-3000元</span>优惠
-            </div>
-            <div class="form-wrap">
-                <form class="form-box">
-                    <div class="form-content">
-                        <div class="inp-textarea">
-                            <textarea class="remark" name="remark" placeholder="我的需求"></textarea>
-                        </div>
-                        <div class="inp-group">
-                            <div class="inp-row">
-                                <input type="text" name="company" placeholder="单位名称" value="">
-                            </div>
-                            <div class="inp-row">
-                                <input type="text" name="truename" placeholder="联系人姓名" value="">
-                                <input type="text" name="mobile" placeholder="回访电话" value="">
-                            </div>
-                            <div class="inp-row">
-                                <input type="text" name="verify" placeholder="验证码">
-                                <a href="javascript:void(0);">
-                                    <img src="/images/public/yzm_null.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-btn">
-                        <button type="button">提交</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+        @Html.Partial("_BottomForm");
     </section>
     <!-- 公共 - 更多服务 end -->
     @Html.Partial("_Help")
@@ -138,13 +106,51 @@
     <script src="/assets/jquery1.11.2.js"></script>
     <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="/js/public.js"></script>
-
+<script src="/js/gVerify.js"></script>
     <script>
         // 服务套餐
         $('.service-title').on('click', function () {
             $(this).toggleClass('cur');
             $(this).siblings('.service-list').slideToggle()
         })
+        //验证码
+        var verifyCode = new GVerify({
+            id: "v_container",
+            type: "number"
+        });
+
+//表单验证
+        function verification() {
+            var verify = $("[name='verify']").val();
+            var mobile = $("[name='mobile']").val();
+            var detail = $("[name='remark']").val();
+            var company = $("[name='contactCompany']").val();
+            var truename = $("[name='truename']").val();
+            if (verifyCode.validate(verify)
+                && !$.isEmptyObject(mobile)
+                && mobile.length == 11
+                && !$.isEmptyObject(detail)
+                && !$.isEmptyObject(company)
+                && !$.isEmptyObject(truename)) {
+                $.post('@Url.Action("AddCooper","Cooper")',
+                    {
+                        linkMan: truename,
+                        company: company,
+                        contact: mobile,
+                        detail: detail
+                    }, function(data,status) {
+                        if (data.data == 1) {
+                            window.alert("提交成功！请等待我们联系您！");
+                            $("#bottom_form")[0].reset();
+                        } else {
+                            window.alert("提交失败！");
+                        }
+                    });
+            } else {
+                window.alert("验证码或表单信息错误");
+            };
+            return false;
+        }
     </script>
     <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
     <script src="/layui/layui.js"></script>

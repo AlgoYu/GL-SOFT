@@ -44,7 +44,7 @@
         <!-- 免费报价 start -->
         <section class="main-body">
             <h3 class="body-title">中企动力为您提供免费报价</h3>
-            <form class="form" action="">
+            <form class="form" onsubmit="return verification();" action="#" id="bottom_form">
                 <dl class="form-dl public-center">
                     <dt class="form-dt">1 . 选择产品类型</dt>
                     <dd class="form-dd">
@@ -309,7 +309,7 @@
                         <ul class="inp-group">
                             <li class="inp-item">
                                 <label>公司</label>
-                                <input type="text" name="company" value="" />
+                                <input type="text" name="contactCompany" value="" />
                             </li>
                             <li class="inp-item">
                                 <label>姓名</label>
@@ -322,15 +322,17 @@
                             <li class="inp-item">
                                 <label>验证码</label>
                                 <input type="text" id="verify" name="verify" class="verify-inp">
-                                <a class="verify-link" href="javascript:void(0);">
-                                    <img src="/images/public/yzm_null.jpg">
-                                </a>
+                                @*<a class="verify-link" href="javascript:void(0);">
+            <img src="/images/public/yzm_null.jpg">
+        </a>*@
+                                <div id="v_container" style="display: inline-flex; width: 97px; height: 35px; position: relative; top: 16px;"></div>
                             </li>
+                            
                         </ul>
                     </dd>
                 </dl>
                 <div class="form-bottom">
-                    <button type="button">给我报价</button>
+                    <button type="submit">给我报价</button>
                 </div>
             </form>
         </section>
@@ -345,16 +347,63 @@
     <script src="assets/jquery1.11.2.js"></script>
     <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <script src="js/public.js"></script>
+    <script src="/js/gVerify.js"></script>
     <script>
-        $('.type-group .type-item').click(function () {
+        $('.type-group .type-item').click(function() {
             var index = $(this).index();
             $(this).addClass('cur').siblings('.type-item').removeClass('cur');
             $('.fn-group').eq(index).fadeIn('fast').siblings().hide();
             $('.fn-group .fn-item').removeClass('cur');
-        })
-        $('.fn-group .fn-item').click(function () {
+        });
+        $('.fn-group .fn-item').click(function() {
             $(this).toggleClass('cur');
-        })
+        });
+
+        //验证码
+        var verifyCode = new GVerify({
+            id: "v_container",
+            type: "number"
+        });
+
+        //表单验证
+        function verification() {
+            var verify = $("[name='verify']").val();
+            var mobile = $("[name='mobile']").val();
+            var details = $(".cur");
+            var detail = "";
+            for (var i = 0; i < details.length; i++) {
+                detail += details[i].innerText + "|";
+            };
+            detail = detail.replace(/[\r\n]/g, "|");
+            console.log("---下面是类查询---");
+            console.log(detail);
+            var company = $("[name='contactCompany']").val();
+            var truename = $("[name='truename']").val();
+            if (verifyCode.validate(verify)
+                && !$.isEmptyObject(mobile)
+                && mobile.length == 11
+                && !$.isEmptyObject(detail)
+                && !$.isEmptyObject(company)
+                && !$.isEmptyObject(truename)) {
+                $.post('@Url.Action("AddCooper","Cooper")',
+                    {
+                        linkMan: truename,
+                        company: company,
+                        contact: mobile,
+                        detail: detail
+                    }, function(data,status) {
+                        if (data.data == 1) {
+                            window.alert("提交成功！请等待我们联系您！");
+                            $("#bottom_form")[0].reset();
+                        } else {
+                            window.alert("提交失败！");
+                        }
+                    });
+            } else {
+                window.alert("验证码或表单信息错误");
+            };
+            return false;
+        }
     </script>
     <script src="https://cdn.bootcss.com/vue/2.5.18-beta.0/vue.min.js"></script>
     <script src="/layui/layui.js"></script>

@@ -1,0 +1,35 @@
+﻿<div class="form-block">
+    <div class="form-title">
+        填写您的需求，我们免费为您定制方案并获取
+        <span class="small">1000-3000元</span>优惠
+    </div>
+    <div class="form-wrap">
+        <form id="bottom_form" class="form-box" onsubmit="return verification();" action="#">
+            <div class="form-content">
+                <div class="inp-textarea">
+                    <textarea class="remark" name="remark" placeholder="我的需求"></textarea>
+                </div>
+                <div class="inp-group">
+                    <div class="inp-row">
+                        <input type="text" name="contactCompany" placeholder="单位名称" value="">
+                    </div>
+                    <div class="inp-row">
+                        <input type="text" name="truename" placeholder="联系人姓名" value="">
+                        <input type="text" name="mobile" placeholder="回访电话" value="">
+                    </div>
+                    <div class="inp-row">
+                        <input type="text" name="verify" placeholder="验证码">
+                        <a href="javascript:void(0);">
+                            @*<img src="/images/public/yzm_null.jpg" alt="">*@
+                            <span id="v_container" style="width: 120px;height: 40px; display: inline-flex; position: relative;top:14px;left:1px"></img>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="form-btn">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
