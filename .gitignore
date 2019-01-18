@@ -6,3 +6,6 @@ CompanyWebSite/bin/
 
 #temp file directory
 CompanyWebSite/obj/
+
+#Migrations
+CompanyWebSite/Migrations

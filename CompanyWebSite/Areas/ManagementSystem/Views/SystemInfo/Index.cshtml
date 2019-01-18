@@ -19,6 +19,14 @@
                 display:inline-block;
                 width:150px;
             }
+            .textarea-label-style {
+                height: 100px !important;
+                line-height: 80px !important;
+            }
+            .textarea-style {
+                height: 100px;
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -77,6 +85,13 @@
                 <label class="layui-form-label">联系电话</label>
                 <div class="layui-input-inline">
                     <input type="text" name="phone" placeholder="请输入联系电话" autocomplete="off" class="layui-input" lay-verify="required|phone">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label textarea-label-style">外部JS</label>
+                <div class="layui-input-block">
+                    <textarea type="text" name="exteriorJs" placeholder="请输入想要插入的JS代码" class="textarea-style">
+                    </textarea>
                 </div>
             </div>
             <div class="layui-form-item" style="text-align:center;">

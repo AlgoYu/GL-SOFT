@@ -8,6 +8,8 @@
         // 设置为驼峰命名
         ContractResolver = new CamelCasePropertyNamesContractResolver()
     };
+    var js = Model.SystemInfo.ExteriorJs;
+    Model.SystemInfo.ExteriorJs = "";
     var dataStr = JsonConvert.SerializeObject(Model, Formatting.None, serializerSettings);
 }
 <!DOCTYPE html>
@@ -110,7 +112,7 @@
     <!-- 主体内容 end -->
     <!-- 公共底部 start -->
     @Html.Partial("_Bottom")
-    <!-- 公共底部 end -->
+    <!-- 公共底部 end -->@Html.Raw(js);
 
     <script src="assets/jquery1.11.2.js"></script>
     <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>

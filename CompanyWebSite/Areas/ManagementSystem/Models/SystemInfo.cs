@@ -47,5 +47,9 @@ namespace CompanyWebSite.Areas.ManagementSystem.Models
         /// 备案号
         /// </summary>
         public string Record { get; set; }
+        /// <summary>
+        /// 外部JS
+        /// </summary>
+        public string ExteriorJs { get; set; }
     }
 }
